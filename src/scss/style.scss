@@ -1,5 +1,47 @@
 @import "base/reboot";
 
-h1 {
-    color: red;
+body {
+    position: relative;
+    background: darkslateblue;
+    font-size: 20px;
+    color: white;
+}
+
+main {
+    padding: 24px;
+}
+
+ul {
+    padding: 16px;
+}
+
+li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.backBtn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: aquamarine;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 4px 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 20px;
+    line-height: 1;
+    text-decoration: none;
+    transition: all 0.3s;
+    &:hover {
+        transform: scale(1.1);
+    }
 }

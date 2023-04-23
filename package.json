@@ -10,7 +10,8 @@
     },
     "devDependencies": {
         "sass": "^1.62.0",
-        "vite": "^4.3.0"
+        "vite": "^4.3.0",
+        "dat.gui": "^0.7.9"
     },
     "dependencies": {
         "three": "^0.151.3"
