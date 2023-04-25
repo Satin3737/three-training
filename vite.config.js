@@ -6,7 +6,8 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 index: resolve(__dirname, 'index.html'),
-                basic: resolve(__dirname, 'src/views/basic.html')
+                basic: resolve(__dirname, 'src/views/basic.html'),
+                solar: resolve(__dirname, 'src/views/solar.html')
             },
         },
     },

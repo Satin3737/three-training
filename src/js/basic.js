@@ -1,9 +1,10 @@
 import * as THREE from 'three';
 import '../scss/style.scss';
 import {GUI} from "dat.gui";
-import stars from '../img/stars.jpg';
+import stars from '../img/basic/stars.jpg';
 import {OrbitControls} from "three/addons/controls/OrbitControls.js";
 import {GLTFLoader} from "three/addons/loaders/GLTFLoader.js";
+import {canvasResponsive} from "./helper.js";
 
 const modelRoute = '/models/monkey.glb';
 const monkeyUrl = new URL(modelRoute, import.meta.url);
@@ -189,10 +190,4 @@ const animate = (time) => {
 }
 
 renderer.setAnimationLoop(animate);
-
-// responsive
-window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-});
+canvasResponsive(camera, renderer);
