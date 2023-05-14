@@ -6,9 +6,14 @@ import starsTexture from '../../img/solar/stars.jpg';
 import sunTexture from '../../img/solar/sun.jpg';
 import {planetsData} from "./solarData.js";
 
-const renderer = new THREE.WebGLRenderer({antialias: true});
+const renderer = new THREE.WebGLRenderer({
+    antialias: true,
+    powerPreference: 'high-performance'
+});
 const canvas = renderer.domElement;
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
+
 document.body.appendChild(canvas);
 
 const scene = new THREE.Scene();

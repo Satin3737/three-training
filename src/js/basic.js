@@ -9,8 +9,12 @@ import {canvasResponsive} from "./helper.js";
 const modelRoute = '/models/monkey.glb';
 const monkeyUrl = new URL(modelRoute, import.meta.url);
 
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({
+    antialias: true,
+    powerPreference: 'high-performance'
+});
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
 renderer.shadowMap.enabled = true;
 //renderer.setClearColor(0xFFEA00, 0.5); background color
 document.body.appendChild(renderer.domElement);
