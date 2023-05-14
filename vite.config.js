@@ -5,6 +5,9 @@ export default defineConfig({
     root: 'src/',
     publicDir: '../public/',
     base: './',
+    server: {
+        host: true
+    },
     build: {
         rollupOptions: {
             input: {
