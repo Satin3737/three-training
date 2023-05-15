@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import {OrbitControls} from "three/addons/controls/OrbitControls.js";
+import {TrackballControls} from "three/addons/controls/TrackballControls.js";
 import {canvasResponsive} from "../helper.js";
 import '../../scss/style.scss';
 import starsTexture from '../../img/solar/stars.jpg';
@@ -19,8 +19,9 @@ document.body.appendChild(canvas);
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.set(-90, 140, 140);
-const orbitControls = new OrbitControls(camera, canvas);
-orbitControls.update();
+
+const trackballControls = new TrackballControls(camera, canvas);
+trackballControls.enableDamping = true;
 
 const ambientLight = new THREE.AmbientLight(0x333333, 1);
 scene.add(ambientLight);
@@ -79,7 +80,8 @@ const animate = () => {
         planets[planet].planet.rotateY(obj.rotation.aroundSelf);
         planets[planet].planetObj.rotateY(obj.rotation.aroundSun);
     }
-
+    
+    trackballControls.update();
     renderer.render(scene, camera);
 }
 
