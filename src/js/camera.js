@@ -37,6 +37,11 @@ document.body.appendChild(canvas);
 const axesHelper = new THREE.AxesHelper(10);
 scene.add(axesHelper);
 
+// fullscreen
+window.addEventListener('dblclick', () => {
+    canvas.requestFullscreen();
+});
+
 // orbit controls camera
 // const orbitControls = new OrbitControls(camera, canvas);
 // orbitControls.enableDamping = true; // added smooth camera moving

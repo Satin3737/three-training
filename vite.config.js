@@ -15,7 +15,8 @@ export default defineConfig({
                 basic: resolve(__dirname, 'src/views/basic.html'),
                 solar: resolve(__dirname, 'src/views/solar.html'),
                 transform: resolve(__dirname, 'src/views/transform.html'),
-                camera: resolve(__dirname, 'src/views/transform.html')
+                camera: resolve(__dirname, 'src/views/camera.html'),
+                geometry: resolve(__dirname, 'src/views/geometry.html')
             },
         },
         outDir: '../dist',
