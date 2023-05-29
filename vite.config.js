@@ -17,7 +17,8 @@ export default defineConfig({
                 transform: resolve(__dirname, 'src/views/transform.html'),
                 camera: resolve(__dirname, 'src/views/camera.html'),
                 geometry: resolve(__dirname, 'src/views/geometry.html'),
-                debug: resolve(__dirname, 'src/views/debug.html')
+                debug: resolve(__dirname, 'src/views/debug.html'),
+                textures: resolve(__dirname, 'src/views/textures.html')
             },
         },
         outDir: '../dist',
