@@ -19,7 +19,8 @@ export default defineConfig({
                 geometry: resolve(__dirname, 'src/views/geometry.html'),
                 debug: resolve(__dirname, 'src/views/debug.html'),
                 textures: resolve(__dirname, 'src/views/textures.html'),
-                materials: resolve(__dirname, 'src/views/materials.html')
+                materials: resolve(__dirname, 'src/views/materials.html'),
+                texts: resolve(__dirname, 'src/views/texts.html'),
             },
         },
         outDir: '../dist',
