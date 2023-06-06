@@ -21,6 +21,7 @@ export default defineConfig({
                 textures: resolve(__dirname, 'src/views/textures.html'),
                 materials: resolve(__dirname, 'src/views/materials.html'),
                 texts: resolve(__dirname, 'src/views/texts.html'),
+                lights: resolve(__dirname, 'src/views/lights.html'),
             },
         },
         outDir: '../dist',
